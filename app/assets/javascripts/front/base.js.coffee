@@ -1,0 +1,1 @@
+# Base JS file for Front
