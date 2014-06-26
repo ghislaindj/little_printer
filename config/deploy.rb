@@ -6,7 +6,7 @@ set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 
 # APPLICATION
-set :application, "daily_mood"
+set :application, "little_printer"
 set :user,        "#{application}"
 set :use_sudo,    false
 set :deploy_to,   "/home/#{application}/www"
@@ -59,7 +59,7 @@ namespace :deploy do
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
     run "kill -s QUIT `cat #{shared_path}/pids/unicorn.pid`"
-  end  
+  end
 end
 
 namespace :rails do
