@@ -19,9 +19,9 @@ class Yo
     return true
   end
 
-  def print
+  def print(html = self.html)
     if self.can_print?
-      response = Net::HTTP.post_form(URI("#{Settings.printer.url}#{Settings.printer.code}"), {'html' => self.html})
+      response = Net::HTTP.post_form(URI("#{Settings.printer.url}#{Settings.printer.code}"), {'html' => html})
       raise Error if response.code != "200"
 
       self.update_attribute(:printed_at, DateTime.now)

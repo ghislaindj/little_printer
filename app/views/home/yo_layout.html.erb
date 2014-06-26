@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <style type="text/css" media="screen">
+    body {
+      font-family: Verdana;
+      font-size:24px;
+      width: 384px;
+      margin:0px;
+    }
+
+    h1 {
+      font-size: 200px;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 50px;
+      margin: 5px;
+    }
+
+    p.time {
+      font-size: 20px;
+      margin-bottom: 100px;
+    }
+
+    /* Glyph, by Harry Roberts */
+
+    hr.style-eight {
+      padding: 0;
+      border: none;
+      border-top: medium double #333;
+      color: #333;
+      text-align: center;
+    }
+    hr.style-eight:after {
+      content: "Yo!";
+      display: inline-block;
+      position: relative;
+      font-family: Times;
+      top: -0.7em;
+      font-size: 20px;
+      padding: 0 0.25em;
+      background: white;
+    }
+    </style>
+  </head>
+  <body>
+    <hr class="style-eight">
+    <h1>Yo!</h1>
+    <p><small>from</small> <%= @yo.username %></p>
+    <p class="time"><%= @yo.created_at.strftime('%d %B %Y, %H:%M') %></p>
+    <hr class="style-eight">
+  </body>
+</html>

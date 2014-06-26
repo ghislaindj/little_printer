@@ -20,5 +20,6 @@ LittlePrinter::Application.routes.draw do
   root 'home#index'
 
   get '/yo' => 'home#yo'
+  get '/yo_test' => 'home#yo_layout'
 
 end
