@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  
 
-    before_filter :normal_cookies_for_ie_in_iframes!
-  
+
+    #before_filter :normal_cookies_for_ie_in_iframes!
+
 end
