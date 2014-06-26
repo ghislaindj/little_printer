@@ -1,0 +1,26 @@
+<div class="span12">
+  <div class="page-header">
+    <h1>Yos</h1>
+  </div>
+
+  <div>
+    <p>
+      Tentatives de Yo! : <%= @all_yos.count %>
+    </p>
+    <p>
+      Yo! printed : <%= @yos.count %>
+    </p>
+    <br>
+  </div>
+
+  <div class="well">
+    <ul>
+      <% @yos.each do |yo| %>
+        <li>
+          <h4><%= "Yo! from #{yo.username}" %></h4>
+          <h6><%= "printed at #{yo.printed_at.strftime('%d %B %Y, %H:%M')}" %></h6>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

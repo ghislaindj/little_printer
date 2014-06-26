@@ -28,6 +28,8 @@ gem 'bootstrap-sass-extras'
 gem "chartkick"
 
 gem "whenever"
+gem "httparty"
+gem "typhoeus"
 
 group :production, :staging do
   gem "unicorn"

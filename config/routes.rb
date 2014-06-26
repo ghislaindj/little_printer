@@ -9,7 +9,7 @@ LittlePrinter::Application.routes.draw do
   namespace 'backoffice' do
     root to: 'home#dashboard'
     resources :admins
-    resources :users, only: [:index]
+    resources :yos, only: [:index]
   end
 
   devise_for :admins, skip: :all

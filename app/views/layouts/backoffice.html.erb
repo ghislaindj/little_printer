@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-  <!-- 
 
-   /$$$$$$$   /$$$$$$        /$$                       /$$      /$$ /$$ /$$ /$$                
-  | $$__  $$ /$$__  $$      | $$                      | $$$    /$$$|__/| $$| $$                
+  <!--
+
+   /$$$$$$$   /$$$$$$        /$$                       /$$      /$$ /$$ /$$ /$$
+  | $$__  $$ /$$__  $$      | $$                      | $$$    /$$$|__/| $$| $$
   | $$  \ $$| $$  \ $$      | $$$$$$$  /$$   /$$      | $$$$  /$$$$ /$$| $$| $$   /$$ /$$   /$$
   | $$$$$$$ | $$  | $$      | $$__  $$| $$  | $$      | $$ $$/$$ $$| $$| $$| $$  /$$/| $$  | $$
   | $$__  $$| $$  | $$      | $$  \ $$| $$  | $$      | $$  $$$| $$| $$| $$| $$$$$$/ | $$  | $$
@@ -14,20 +14,20 @@
   |_______/  \______/       |_______/  \____  $$      |__/     |__/|__/|__/|__/  \__/ \____  $$
                                        /$$  | $$                                      /$$  | $$
                                       |  $$$$$$/                                     |  $$$$$$/
-                                       \______/                                       \______/ 
+                                       \______/                                       \______/
   -->
-    
+
     <!-- start: Meta -->
     <meta charset="utf-8">
     <title>Backoffice Milky</title>
     <meta name="description" content="Backoffice Milky">
     <meta name="author" content="Milky">
     <!-- end: Meta -->
-    
+
     <!-- start: Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- end: Mobile Specific -->
-    
+
     <!-- start: CSS -->
     <%= stylesheet_link_tag    "backoffice", media: "all", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
@@ -73,7 +73,7 @@
             <li class="nav-header"></li>
             <li class="divider"></li>
             <%= nav_link backoffice_admins_path do %><i class="fa-icon-user icon-white"></i> Admins<% end %>
-            <%= nav_link backoffice_users_path do %><i class="fa-icon-user icon-white"></i> Users<% end %>
+            <%= nav_link backoffice_yos_path do %><i class="fa-icon-user icon-white"></i> Yos<% end %>
           </ul>
         </div><!-- /cold-md-3 -->
         <div class="col-md-9">
@@ -85,7 +85,7 @@
     <div>
 
     <!-- /Container -->
-      
+
     <div class="clearfix"></div>
 
     <footer>
@@ -95,6 +95,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "backoffice" %>
     <!-- end: JavaScript-->
-    
+
   </body>
 </html>

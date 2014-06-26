@@ -95,10 +95,13 @@ GEM
     debugger-ruby_core_source (1.3.5)
     descendants_tracker (0.0.3)
     erubis (2.7.0)
+    ethon (0.7.0)
+      ffi (>= 1.3.0)
     eventmachine (1.0.3)
     execjs (2.2.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    ffi (1.9.3)
     fssm (0.2.10)
     github_api (0.11.3)
       addressable (~> 2.3)
@@ -111,6 +114,9 @@ GEM
     hashie (2.0.5)
     highline (1.6.21)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -213,6 +219,8 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
+    typhoeus (0.6.8)
+      ethon (>= 0.7.0)
     tzinfo (0.3.39)
     uglifier (2.5.1)
       execjs (>= 0.3.0)
@@ -243,6 +251,7 @@ DEPENDENCIES
   devise!
   execjs
   github_api
+  httparty
   jbuilder (~> 1.2)
   jquery-rails
   mongoid!
@@ -256,6 +265,7 @@ DEPENDENCIES
   therubyracer
   thin
   turbolinks
+  typhoeus
   uglifier (>= 1.3.0)
   unicorn
   whenever

@@ -4,7 +4,11 @@ class HomeController < ApplicationController
   end # End of Index
 
   def yo
-    logger.info "############## Yo received from : #{params[:username]}"
+    @username = params[:username].to_s
+
+    yo = Yo.create(username: @username)
+    yo.print
+
     respond_to do |format|
       format.all { render :nothing => true, :status => 200 }
     end
