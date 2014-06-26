@@ -17,9 +17,9 @@
     <ul>
       <% @yos.each do |yo| %>
         <li>
-          <h4><%= "Yo! from #{yo.username}" %></h4>
+          <h4><img class="avatar" style="width:40px" src="http://robohash.org/<%= yo.username %>.png" />
+<%= "Yo! from #{yo.username}" %></h4>
           <h6><%= "printed at #{yo.printed_at.strftime('%d %B %Y, %H:%M')}" %></h6>
-          <img class="avatar" style="width:15px" src="http://robohash.org/<%= @yo.username %>.png" />
         </li>
       <% end %>
     </ul>
