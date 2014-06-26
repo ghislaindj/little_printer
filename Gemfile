@@ -55,3 +55,6 @@ gem "devise", git: "git@github.com:plataformatec/devise.git"
 gem "twitter-bootstrap-rails"
 gem "anjlab-bootstrap-rails", ">= 3.0.0.0", require: "bootstrap-rails"
 gem "rails_config"
+
+gem "net-ssh"
+gem "github_api"

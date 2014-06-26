@@ -1,8 +1,8 @@
-app_path = "/home/daily_mood/www"
+app_path = "/home/little_printer/www"
 current_path = "#{app_path}/current"
 shared_path = "#{app_path}/shared"
 
-worker_processes 2
+worker_processes 4
 
 listen "#{shared_path}/unicorn.sock", :backlog => 64
 

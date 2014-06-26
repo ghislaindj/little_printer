@@ -10,8 +10,8 @@ class MepGenerator < Rails::Generators::NamedBase
   require 'openssl'
 
   def check
-    raise Error if environment == 'staging' and not server_url == 'dev.milky.fr'
-    raise Error if server_url == 'dev.milky.fr' and environment != 'staging'
+    #raise Error if environment == 'staging' and not server_url == 'dev.milky.fr'
+    #raise Error if server_url == 'dev.milky.fr' and environment != 'staging'
   end
 
   def reset_server
