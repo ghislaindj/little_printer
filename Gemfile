@@ -50,3 +50,8 @@ group :development do
 end
 
 gem "ie_iframe_cookies", git: "https://github.com/grosser/ie_iframe_cookies.git"
+gem "mongoid", git: "https://github.com/mongoid/mongoid.git"
+gem "devise", git: "git@github.com:plataformatec/devise.git"
+gem "twitter-bootstrap-rails"
+gem "anjlab-bootstrap-rails", ">= 3.0.0.0", require: "bootstrap-rails"
+gem "rails_config"

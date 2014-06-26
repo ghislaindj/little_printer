@@ -1,0 +1,33 @@
+<%= form_for @admin, url: backoffice_admins_path, remote: true, :html => { :class => 'form-horizontal' } do |f| %>
+  <div id="modal_new_webservice" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Création d'un nouvel administrateur</h3>
+        </div>
+        <div class="modal-body">
+          <p>Renseignez ici ses informations</p>
+
+            <div class="form-group">
+              <%= f.label :email do %>E-mail<% end %>
+              <div class="controls">
+                <%= f.text_field :email, :class => 'form-control', :placeholder => 'Ex : example@example.com' %>
+              </div>
+            </div>
+            <div class="form-group">
+              <%= f.label :password do %>Mot de passe<% end %>
+              <div class="controls">
+                <%= f.password_field :password, :class => 'form-control', :placeholder => 'Ex : asecurepassword' %>
+              </div>
+            </div>    
+          <p>Attention, le mot de passe doit faire 8 caractères minimum !</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-dismiss" data-dismiss="modal" aria-hidden="true">Annuler</button>
+          <%= f.submit 'Valider', :class => 'btn btn-primary' %>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+<% end %>

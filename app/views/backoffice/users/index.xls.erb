@@ -1,0 +1,14 @@
+<table border="1">
+  <tr>
+      <% User.fields.each do |f| %>
+        <th><%= f.first %></th>
+      <% end %>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <% User.fields.each do |f| %>
+        <td><%= user.send(f.first) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

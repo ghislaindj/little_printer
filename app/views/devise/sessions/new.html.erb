@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="sign_in_container">
+    <div class="sign_in">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Addresse email' %>
+        <%= f.password_field :password, class: 'form-control', placeholder: "Mot de passe" %>
+        <% if devise_mapping.rememberable? -%>
+          <label class="remember" for="remember">
+            <%= f.check_box :remember_me %> Remember me
+          </label>
+        <% end -%>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="logo_container">
+    <%= image_tag 'backoffice/logo.png' %>
+  </div>
+</div>

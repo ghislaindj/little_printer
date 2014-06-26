@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+  <!-- 
+
+   /$$$$$$$   /$$$$$$        /$$                       /$$      /$$ /$$ /$$ /$$                
+  | $$__  $$ /$$__  $$      | $$                      | $$$    /$$$|__/| $$| $$                
+  | $$  \ $$| $$  \ $$      | $$$$$$$  /$$   /$$      | $$$$  /$$$$ /$$| $$| $$   /$$ /$$   /$$
+  | $$$$$$$ | $$  | $$      | $$__  $$| $$  | $$      | $$ $$/$$ $$| $$| $$| $$  /$$/| $$  | $$
+  | $$__  $$| $$  | $$      | $$  \ $$| $$  | $$      | $$  $$$| $$| $$| $$| $$$$$$/ | $$  | $$
+  | $$  \ $$| $$  | $$      | $$  | $$| $$  | $$      | $$\  $ | $$| $$| $$| $$_  $$ | $$  | $$
+  | $$$$$$$/|  $$$$$$/      | $$$$$$$/|  $$$$$$$      | $$ \/  | $$| $$| $$| $$ \  $$|  $$$$$$$
+  |_______/  \______/       |_______/  \____  $$      |__/     |__/|__/|__/|__/  \__/ \____  $$
+                                       /$$  | $$                                      /$$  | $$
+                                      |  $$$$$$/                                     |  $$$$$$/
+                                       \______/                                       \______/ 
+  -->
+    
+    <!-- start: Meta -->
+    <meta charset="utf-8">
+    <title>Backoffice Milky</title>
+    <meta name="description" content="Backoffice Milky">
+    <meta name="author" content="Milky">
+    <!-- end: Meta -->
+    
+    <!-- start: Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- end: Mobile Specific -->
+    
+    <!-- start: CSS -->
+    <%= stylesheet_link_tag    "backoffice", media: "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-toggle"></span>
+        </button>
+        <a class="navbar-brand" href="#"><%= image_tag 'backoffice/logo_top.png' %></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle='dropdown' style='text-shadow: none;'>
+              <%= current_admin.email %>
+              <b class='caret'></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to destroy_admin_session_path, method: :delete do %><i class="icon-off"></i> Se déconnecter</a><% end %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /Header -->
+
+    <!-- Container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <!-- Left -->
+          <ul class="nav nav-pills nav-stacked">
+            <li class="nav-header"></li>
+            <li class="divider"></li>
+            <%= nav_link backoffice_admins_path do %><i class="fa-icon-user icon-white"></i> Admins<% end %>
+            <%= nav_link backoffice_users_path do %><i class="fa-icon-user icon-white"></i> Users<% end %>
+          </ul>
+        </div><!-- /cold-md-3 -->
+        <div class="col-md-9">
+        <!-- Right -->
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+      </div>
+    <div>
+
+    <!-- /Container -->
+      
+    <div class="clearfix"></div>
+
+    <footer>
+    </footer>
+
+    <!-- start: JavaScript-->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "backoffice" %>
+    <!-- end: JavaScript-->
+    
+  </body>
+</html>
