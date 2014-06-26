@@ -27,6 +27,8 @@ gem 'bootstrap-sass-extras'
 # Backoffice
 gem "chartkick"
 
+gem "whenever"
+
 group :production, :staging do
   gem "unicorn"
   gem "execjs"
