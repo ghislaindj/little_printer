@@ -4,3 +4,9 @@ development:
       database: little_printer_development
       hosts:
         - localhost:<%= ENV['BOXEN_MONGODB_PORT'] || 27017 %>
+production:
+  sessions:
+    default:
+      database: little_printer_production
+      hosts:
+        - localhost:27017
