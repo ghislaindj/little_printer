@@ -34,4 +34,8 @@ class Yo
   def printed
     self.printed_at.present?
   end
+
+  def avatar
+    "http://robohash.org/#{self.username}+#{self.created_at.to_i}.png"
+  end
 end
