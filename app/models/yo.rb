@@ -12,7 +12,7 @@ class Yo
   def can_print?
     last_yo = Yo.where(username: self.username).order("printed_at DESC").first
 
-    if last_yo && last_yo.printed_at > 10.minute.ago
+    if last_yo && last_yo.printed_at && last_yo.printed_at > 10.minute.ago
       return false
     end
 
