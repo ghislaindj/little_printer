@@ -7,6 +7,7 @@
       font-size:24px;
       width: 384px;
       margin:0px;
+      text-align: center;
     }
 
     h1 {
@@ -27,32 +28,35 @@
       margin-bottom: 100px;
     }
 
-    /* Glyph, by Harry Roberts */
-
-    hr.style-eight {
-      padding: 0;
-      border: none;
-      border-top: medium double #333;
-      color: #333;
-      text-align: center;
+    h4, p.time {
+      font-family: 'Merienda One';
     }
-    hr.style-eight:after {
-      content: "Yo!";
-      display: inline-block;
-      position: relative;
-      font-family: Times;
-      top: -0.7em;
-      font-size: 20px;
-      padding: 0 0.25em;
-      background: white;
+
+    h4 {
+      margin: 5px;
+    }
+
+    img.avatar {
+      width: 100%;
+    }
+
+    hr.style-two {
+      border: 0;
+      height: 3px;
+      background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+      background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+      background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+      background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
     }
     </style>
   </head>
   <body>
-    <hr class="style-eight">
+    <hr class="style-two">
+    <img class="avatar" src="http://robohash.org/<%= @yo.username %>.png" />
     <h1>Yo!</h1>
-    <p><small>from</small> <%= @yo.username %></p>
+    <h4>from</h4>
+    <p><%= @yo.username %></p>
     <p class="time"><%= @yo.created_at.strftime('%d %B %Y, %H:%M') %></p>
-    <hr class="style-eight">
+    <hr class="style-two">
   </body>
 </html>
