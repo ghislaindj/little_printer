@@ -6,7 +6,7 @@ class Yo
   field :printed_at,            type: Time
 
   def html
-    "html=<html><head><meta charset='utf-8'></head><body><h1>Yo!</h1><p>From #{self.username}</p></body></html>"
+    "<html><head><meta charset='utf-8'></head><body><h1>Yo!</h1><p>From #{self.username}</p></body></html>"
   end
 
   def can_print?
@@ -21,8 +21,8 @@ class Yo
 
   def print
     if self.can_print?
-      #response = Net::HTTP.post_form(URI("#{Settings.printer.url}#{Settings.printer.code}"), {'html' => self.html})
-      #raise Error if response.code != "200"
+      response = Net::HTTP.post_form(URI("#{Settings.printer.url}#{Settings.printer.code}"), {'html' => self.html})
+      raise Error if response.code != "200"
 
       self.update_attribute(:printed_at, DateTime.now)
       logger.info "############# Yo! printed from #{self.username}"
