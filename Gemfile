@@ -27,6 +27,9 @@ gem 'bootstrap-sass-extras'
 # Backoffice
 gem "chartkick"
 
+# gem "mongoid-paperclip", :require => "mongoid_paperclip"
+# gem "paperclip"
+
 gem "whenever"
 gem "httparty"
 gem "typhoeus"
@@ -46,4 +49,5 @@ group :development do
   gem "thin"
   gem "net-ssh"
   gem "github_api"
+  gem "foreman"
 end

@@ -1,0 +1,2 @@
+Rails: cd .. ; rails server
+Grunt: grunt serve
